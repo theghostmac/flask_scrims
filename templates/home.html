@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %}       
+        <title>Flask Blog - {{ title }}</title>
+        {% else %}
+        <title>Flask Blog</title>
+        {% endif %}
+    </head>
+    <body>
+        {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <p>By {{ <post class="author"></post> }} on {{ <post class="datePosted"></post> }}</p>
+        <p> {{ <post class="content"></post> }} </p>
+        {% endfor %}
+
+    </body>
+</html>
